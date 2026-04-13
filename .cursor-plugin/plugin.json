@@ -1,0 +1,17 @@
+{
+  "name": "contentstack-vibe-docs",
+  "displayName": "Contentstack Vibe Docs",
+  "version": "2.0.0",
+  "description": "Comprehensive Contentstack CMS documentation for building web applications. Covers REST API, GraphQL API, Content Management API, Image Delivery API, TypeScript SDKs, Live Preview, OAuth authentication, and framework patterns for Next.js, Nuxt, and Gatsby.",
+  "author": {
+    "name": "Tim Benniks"
+  },
+  "homepage": "https://github.com/contentstack/contentstack-vibe-docs",
+  "repository": "https://github.com/contentstack/contentstack-vibe-docs",
+  "license": "MIT",
+  "keywords": ["contentstack", "cms", "headless-cms", "documentation", "nextjs", "nuxt", "gatsby"],
+  "category": "developer-tools",
+  "tags": ["cms", "contentstack", "documentation", "vibe-coding"],
+  "skills": "./skills/",
+  "rules": "./rules/"
+}
