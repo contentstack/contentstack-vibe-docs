@@ -115,9 +115,9 @@ This skill uses **progressive disclosure** to keep your agent's context window c
 ```
 User: "Add live preview to my Next.js app"
   → Agent loads SKILL.md (routing table)
-  → Reads references/live-preview/concepts.md (131 lines)
-  → Reads references/live-preview/ssr-mode.md (315 lines)
-  → Reads references/frameworks/nextjs.md (424 lines)
+  → Reads references/live-preview/concepts.md (143 lines)
+  → Reads references/live-preview/ssr-mode.md (367 lines)
+  → Reads references/frameworks/nextjs.md (604 lines)
   → Implements with copy-paste ready code
 ```
 
