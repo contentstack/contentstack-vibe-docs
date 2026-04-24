@@ -2,7 +2,7 @@
 
 An [Agent Skill](https://agentskills.io/) that gives AI coding agents comprehensive Contentstack CMS knowledge. Works with Claude Code, Cursor, GitHub Copilot, VS Code, Gemini CLI, Roo Code, and [25+ other tools](https://agentskills.io/).
 
-> **AI Agents: Read [SKILL.md](SKILL.md).** It contains routing rules that direct you to the 1-3 files you need. Do not read all files — this skill contains ~13,500 lines across 32 reference documents.
+> **AI Agents: Read [`skills/contentstack-vibe-docs/SKILL.md`](skills/contentstack-vibe-docs/SKILL.md).** It contains routing rules that direct you to the 1-3 files you need. Do not read all files — this skill contains ~13,500 lines across 34 reference documents.
 
 ---
 
@@ -129,7 +129,7 @@ This places `codex/AGENTS.md` and `codex/skills/contentstack-vibe-docs/` in your
 
 ### Any other agent (manual)
 
-Every major agent reads at least one of: `CLAUDE.md`, `AGENTS.md`, `SKILL.md`, or `.cursor/rules/*.mdc`. Point your agent at the repo root or copy `SKILL.md` + `references/` into your project — the routing table does the rest.
+Every major agent reads at least one of: `CLAUDE.md`, `AGENTS.md`, `skills/*/SKILL.md`, or `.cursor/rules/*.mdc`. Point your agent at the repo root or copy `skills/contentstack-vibe-docs/` into your project — the routing table in `SKILL.md` does the rest.
 
 ---
 
@@ -143,10 +143,10 @@ This skill uses **progressive disclosure** to keep your agent's context window c
 
 ```
 User: "Add live preview to my Next.js app"
-  → Agent loads SKILL.md (routing table)
-  → Reads references/live-preview/concepts.md (143 lines)
-  → Reads references/live-preview/ssr-mode.md (367 lines)
-  → Reads references/frameworks/nextjs.md (604 lines)
+  → Agent loads skills/contentstack-vibe-docs/SKILL.md (routing table)
+  → Reads skills/contentstack-vibe-docs/references/live-preview/concepts.md
+  → Reads skills/contentstack-vibe-docs/references/live-preview/ssr-mode.md
+  → Reads skills/contentstack-vibe-docs/references/frameworks/nextjs.md
   → Implements with copy-paste ready code
 ```
 
@@ -156,26 +156,26 @@ User: "Add live preview to my Next.js app"
 
 | Topic | Reference File |
 |-------|---------------|
-| Quick code patterns | [QUICK_REFERENCE.md](references/QUICK_REFERENCE.md) |
-| CMS fundamentals | [base-concepts.md](references/concepts/base-concepts.md) |
-| Data modeling best practices | [data-modeling-best-practices.md](references/concepts/data-modeling-best-practices.md) |
-| Region configuration | [regions.md](references/concepts/regions.md) |
-| REST Content Delivery API | [rest-api.md](references/api/rest-api.md) |
-| GraphQL Content Delivery API | [graphql-api.md](references/api/graphql-api.md) |
-| Content Management API (CRUD) | [content-management-api.md](references/api/content-management-api.md) |
-| Image Delivery API (transforms) | [image-delivery-api.md](references/api/image-delivery-api.md) |
-| TypeScript Delivery SDK | [delivery-sdk.md](references/sdk/delivery-sdk.md) |
-| Live Preview (concepts) | [concepts.md](references/live-preview/concepts.md) |
-| Live Preview (CSR mode) | [csr-mode.md](references/live-preview/csr-mode.md) |
-| Live Preview (SSR mode) | [ssr-mode.md](references/live-preview/ssr-mode.md) |
-| Next.js patterns | [nextjs.md](references/frameworks/nextjs.md) |
-| Nuxt patterns | [nuxt.md](references/frameworks/nuxt.md) |
-| Gatsby patterns | [gatsby.md](references/frameworks/gatsby.md) |
-| OAuth with Auth.js | [oauth.md](references/authentication/oauth.md) |
-| CLI plugin development | [cli-plugins.md](references/extensions/cli-plugins.md) |
-| Developer Hub apps | [devhub-apps.md](references/extensions/devhub-apps.md) |
-| Real-world code examples | [practical-examples.md](references/examples/practical-examples.md) |
-| Package version compatibility | [VERSIONS.md](references/VERSIONS.md) |
+| Quick code patterns | [QUICK_REFERENCE.md](skills/contentstack-vibe-docs/references/QUICK_REFERENCE.md) |
+| CMS fundamentals | [base-concepts.md](skills/contentstack-vibe-docs/references/concepts/base-concepts.md) |
+| Data modeling best practices | [data-modeling-best-practices.md](skills/contentstack-vibe-docs/references/concepts/data-modeling-best-practices.md) |
+| Region configuration | [regions.md](skills/contentstack-vibe-docs/references/concepts/regions.md) |
+| REST Content Delivery API | [rest-api.md](skills/contentstack-vibe-docs/references/api/rest-api.md) |
+| GraphQL Content Delivery API | [graphql-api.md](skills/contentstack-vibe-docs/references/api/graphql-api.md) |
+| Content Management API (CRUD) | [content-management-api.md](skills/contentstack-vibe-docs/references/api/content-management-api.md) |
+| Image Delivery API (transforms) | [image-delivery-api.md](skills/contentstack-vibe-docs/references/api/image-delivery-api.md) |
+| TypeScript Delivery SDK | [delivery-sdk.md](skills/contentstack-vibe-docs/references/sdk/delivery-sdk.md) |
+| Live Preview (concepts) | [concepts.md](skills/contentstack-vibe-docs/references/live-preview/concepts.md) |
+| Live Preview (CSR mode) | [csr-mode.md](skills/contentstack-vibe-docs/references/live-preview/csr-mode.md) |
+| Live Preview (SSR mode) | [ssr-mode.md](skills/contentstack-vibe-docs/references/live-preview/ssr-mode.md) |
+| Next.js patterns | [nextjs.md](skills/contentstack-vibe-docs/references/frameworks/nextjs.md) |
+| Nuxt patterns | [nuxt.md](skills/contentstack-vibe-docs/references/frameworks/nuxt.md) |
+| Gatsby patterns | [gatsby.md](skills/contentstack-vibe-docs/references/frameworks/gatsby.md) |
+| OAuth with Auth.js | [oauth.md](skills/contentstack-vibe-docs/references/authentication/oauth.md) |
+| CLI plugin development | [cli-plugins/overview.md](skills/contentstack-vibe-docs/references/extensions/cli-plugins/overview.md) |
+| Developer Hub apps | [devhub-apps.md](skills/contentstack-vibe-docs/references/extensions/devhub-apps.md) |
+| Real-world code examples | [practical-examples.md](skills/contentstack-vibe-docs/references/examples/practical-examples.md) |
+| Package version compatibility | [VERSIONS.md](skills/contentstack-vibe-docs/references/VERSIONS.md) |
 
 All regions supported: US, EU, AU, Azure NA/EU, GCP NA/EU.
 
@@ -196,39 +196,39 @@ This skill includes built-in security measures and red flags that instruct agent
 
 ## Documentation Structure
 
-This repo follows the [Open Plugins](https://open-plugins.com/plugin-builders) standard and ships dedicated directories for every major agent harness:
+This repo follows the [Open Plugins](https://open-plugins.com/plugin-builders) standard and the [agentskills.io](https://agentskills.io/) skill-directory convention. The skill itself is canonical — everything else is either a root-level pointer or a generated per-harness copy.
 
 ```
-CLAUDE.md                    # Router for Claude Code (project context)
-AGENTS.md                    # Router for agentskills.io / Codex / generic agents
-SKILL.md                     # Source of truth — routing table + decision helpers
+CLAUDE.md                    # Root pointer for Claude Code (project context)
+AGENTS.md                    # Root pointer for agentskills.io / Codex / generic agents
+README.md                    # This file
 gemini-extension.json        # Manifest for `gemini skills install`
 
-.plugin/plugin.json          # Open Plugins manifest (OpenCode, etc.)
+.plugin/plugin.json          # Open Plugins manifest
 .claude-plugin/plugin.json   # Claude Code plugin manifest
 .cursor-plugin/plugin.json   # Cursor plugin manifest
 
 skills/
-└── contentstack-vibe-docs/  # Generated — used by plugin manifests
-    ├── SKILL.md
-    └── references/
+└── contentstack-vibe-docs/  # ★ Source of truth — the skill itself
+    ├── SKILL.md             # Routing table + decision helpers
+    └── references/          # 34 reference files (see tree below)
 
-codex/                       # Generated — copy this into your project for Codex CLI
-├── AGENTS.md
+rules/
+└── contentstack.mdc         # Source — Cursor rule (points at SKILL.md)
+
+codex/                       # Generated — copy into your project for Codex CLI
+├── AGENTS.md                # (hand-written, not generated)
 └── skills/contentstack-vibe-docs/
     ├── SKILL.md
     └── references/
-
-rules/
-└── contentstack.mdc         # Source — Cursor rules (routing, helpers, security)
 
 cursor/
 └── rules/contentstack.mdc   # Generated — for manual `.cursor/rules/` install
 
 scripts/
-└── build.sh                 # Copies SKILL.md + references/ + rules/ into the generated dirs
+└── build.sh                 # Regenerates codex/ and cursor/ from the canonical source
 
-references/
+skills/contentstack-vibe-docs/references/
 ├── QUICK_REFERENCE.md          # Condensed patterns for quick lookup
 ├── VERSIONS.md                 # Package version compatibility
 ├── concepts/
@@ -267,7 +267,10 @@ references/
 │   ├── nuxt.md                 # Nuxt 4 patterns
 │   └── gatsby.md               # Gatsby patterns
 ├── extensions/
-│   ├── cli-plugins.md          # CLI plugin development
+│   ├── cli-plugins/            # CLI plugin development (overview + commands + publishing)
+│   │   ├── overview.md
+│   │   ├── commands.md
+│   │   └── publishing.md
 │   ├── devhub-apps.md          # Developer Hub apps (App SDK, UI locations, API proxy)
 │   └── launch.md               # Contentstack Launch deployments + env sync
 └── examples/
@@ -276,13 +279,13 @@ references/
 
 ### Maintainer note
 
-The single source of truth is **`SKILL.md`**, **`references/`**, and **`rules/contentstack.mdc`**. The per-harness directories (`skills/`, `codex/skills/`, `cursor/rules/`) are generated — do not edit them by hand. After editing a source file, run:
+The single source of truth is **`skills/contentstack-vibe-docs/`** (SKILL.md + references/) and **`rules/contentstack.mdc`**. Everything under `codex/skills/` and `cursor/rules/` is generated — do not edit those directly. After editing a source file, run:
 
 ```bash
 bash scripts/build.sh
 ```
 
-This copies the sources into every harness directory. Generated files are committed so GitHub / zip-download installs work without running the script.
+Generated files are committed so GitHub / zip-download installs work without running the script locally.
 
 ---
 
